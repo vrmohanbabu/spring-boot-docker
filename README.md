@@ -14,6 +14,10 @@ Deploy a Sprint boot web application to docker using the Jenkins pipeline.
 
 * [Install Docker](https://docs.docker.com/engine/install/ubuntu/) 
 
+### Install Java JDK 8 on Windows, Mac or Ubuntu:
+
+* [Documentation by https://www.ntu.edu.sg/](https://www.ntu.edu.sg/home/ehchua/programming/howto/JDK_HowTo.html)
+
 ### Install Maven:
 
 * `sudo apt-get install maven -y`
