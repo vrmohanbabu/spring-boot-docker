@@ -18,9 +18,19 @@ Deploy a Spring boot web application to docker using the Jenkins pipeline.
 
 * [Documentation by https://www.ntu.edu.sg/](https://www.ntu.edu.sg/home/ehchua/programming/howto/JDK_HowTo.html)
 
-### Install Maven:
+### Use Maven Wrapper for unix and windows:
 
-* `sudo apt-get install maven -y`
+* Unix - `./mvnw`
+* Windows - `./mvnw.cmd`
+
+### Or 
+
+### Install Maven: 
+
+* Ubuntu - `sudo apt-get install maven -y`
+* Windows - [Documentation by https://maven.apache.org/](https://maven.apache.org/install.html)
+
+## To Deploy through Jenkins(CI/CD):
 
 ### Install Jenkins:
 
@@ -46,3 +56,19 @@ Like this - Got permission denied while trying to connect to the Docker daemon s
 * Add the docker group if it doesn't already exist: `sudo groupadd docker`
 * Add the user "jenkins" to the docker group: `sudo usermod -a -G docker jenkins`
 * Then restart Jenkins: `sudo service jenkins restart`
+
+## To deploy manually inside Docker without Jenkins:
+
+* mvn build - `mvn clean install package`
+* Docker image build - `docker build -t travelblog .`
+* Remove any running Container - `./stop-container.sh`
+* Run Docker Container - `docker container run --name tbcontainer -p 8000:8080 -d travelblog`
+
+## To just run the spring boot:
+
+* Unix - `./mvnw spring-boot:run`
+* Windows - `./mvnw.cmd spring-boot:run`
+
+## In Webpage:
+
+* Paste the IP and append “/travelblog” on the end in the browser.
