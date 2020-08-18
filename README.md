@@ -1,6 +1,6 @@
 ## Project Overview
 
-Deploy a Sprint boot web application to docker using the Jenkins pipeline. 
+Deploy a Spring boot web application to docker using the Jenkins pipeline. 
 
 ---
 
