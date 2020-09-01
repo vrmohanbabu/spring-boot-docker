@@ -37,8 +37,7 @@ Deploy a Spring boot web application to docker using the Jenkins pipeline.
 * `wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -`
 * `sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ >> /etc/apt/sources.list'`
 * `sudo apt-get update`
-* `wget https://pkg.jenkins.io/debian-stable/binary/jenkins_2.204.6_all.deb`
-* `sudo apt install ./jenkins_2.204.6_all.deb -y`
+* `sudo apt-get install jenkins`
 * `sudo systemctl start jenkins`
 * `sudo systemctl enable jenkins`
 * `sudo systemctl status jenkins`
